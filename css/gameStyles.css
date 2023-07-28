@@ -1,0 +1,163 @@
+/* Presets */
+* {
+    margin: 0;
+    padding: 0;
+  }
+  .btn:focus, .btn:active, .btn:active:focus{
+    outline: none !important;
+  }
+  html, body{
+    height: 100%;
+  }
+  body{
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      background-color: #222;
+  }
+  
+  .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 30px 15px;
+    text-align: center;
+    background-color: #222;
+    cursor: pointer;
+  }
+  
+  /* Cards */ 
+   .validCard i.valid{ visibility: visible !important; }
+   .invalidCard i.invalid{ visibility: visible !important; }
+
+   .validCard          ,
+   .validCard .square  ,
+   .invalidCard        ,
+   .invalidCard .square{
+    background: rgba(0, 0, 0, 0.5) !important;
+  }
+
+  .flip-box,
+  .front,
+  .back {
+    width: 200px;
+    height: 315px;
+  }
+  
+  .flip-box {
+    display: inline-block;
+    margin: 5px;
+    text-decoration: none;
+    perspective: 1000px;
+  }
+  
+  .flip {
+    position: relative;
+    transition: .5s;
+    transform-style: preserve-3d;
+  }
+  
+  .flip-box:hover .flip {
+    transform: rotateY(180deg);
+  }
+  
+  /* Faces */
+  .front,
+  .back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-shadow: 1px 1px 5px 1px rgba(0,0,0,.5);
+    border-radius: 5px;
+    backface-visibility: hidden; /* For Firefox */
+  }
+  
+  .front {
+    background-color: #CFD8DC;
+    background-image: 
+      radial-gradient(closest-side, transparent 98%, rgba(0,0,0,.3) 99%),
+      radial-gradient(closest-side, transparent 98%, rgba(0,0,0,.3) 99%);
+    background-size: 10px 10px;
+    background-position: 0 0, 5px 5px;
+  }
+  
+  .back {
+    box-sizing: border-box;
+    transform: rotateY(180deg);
+    position: relative;
+    padding: 5px;
+    background: #eeeeee;
+    font-family: sans-serif;
+    line-height: 1.4em;
+    text-align: left;
+  }
+
+  
+  .back:before {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 2em;
+  }
+  
+  .back:after {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 2em;
+    transform: rotate(180deg);
+  }
+  
+  .black {
+    color: #424242;
+    background-color: #424242;
+  }
+
+  .cardLine{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+
+  }
+  .square{
+      margin: 2%;
+      background-color: #eee;
+  }
+  .square-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+    padding: 3% 1%;
+    border-radius: 16%;
+  }
+  .square .number,
+  .titlesWrapper .cardTitle{
+      font-family: 'Montserrat';
+      font-size: 15px;
+      font-weight: bold;
+  }
+  .cardTitle{
+      display: table-cell;
+      width: 200px;
+      color: #eee;
+  }
+  .titlesWrapper,
+  .cardsWrapper ,
+  .btnWrapper   {
+      display: flex;
+      justify-content: space-around;
+      width: 80%;
+      margin: 0 10%;
+  }
+
+  i.valid,
+  i.invalid{
+    visibility: hidden;
+    position: absolute;
+    font-size: 120px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }

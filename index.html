@@ -1,0 +1,89 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  
+<link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+<meta name="apple-mobile-web-app-title" content="CodePen">
+
+<link rel="icon" type="image/vnd.microsoft.icon" href="images/hat.ico">
+
+<link rel="mask-icon" type="" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
+
+
+  <title>Projetos - Cartas mágicas de Hacker Master</title>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
+  <!-- Local css -->
+  <link rel="stylesheet" href="css/indexStyles.css" type="text/css">
+
+  <script>
+    window.console = window.console || function(t) {};
+  </script>
+
+  
+  
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+
+
+</head>
+
+<body>
+    <input class="logic-checkbox" type="checkbox" id="HowToPlayPopup"/>
+    <input class="logic-checkbox" type="checkbox" id="whoAmIPopup"/>
+    <section class="game-menu-frame">
+      <header class="game-header">
+        <h1 class="game-title"> 
+          <div class="line-1">As cartas mágicas</div>
+          <div class="line-2">de Hacker Master</div>
+          <div class="line-3">A mágica está em você!</div>
+        </h1>
+      </header>
+      <nav class="game-nav">
+        <ul class="game-nav-list">
+          <li class="game-nav-item"> 
+            <label class="game-nav-button" for="toggleGame" tabindex="0" onclick="window.location.assign('game.html')">Começar</label>
+          </li>
+          <li class="game-nav-item"> 
+            <label class="game-nav-button" for="HowToPlayPopup" tabindex="0">Como funciona?</label>
+          </li>
+          <li class="game-nav-item"> 
+            <label class="game-nav-button" for="whoAmIPopup" tabindex="0">Créditos</label>
+          </li>
+          <li class="game-nav-item"><a class="game-nav-button" href="https://github.com/KauanBonatto/hmc-magic-cards">Sair</a></li>
+        </ul>
+      </nav>
+    </section>
+    
+    <section class="popup common-content" id="whoAmI">
+      <label class="close-button" for="whoAmIPopup" tabindex="0">x</label>
+      <h3 class="common-title">Créditos</h3>
+      <p> Sistema desenvolvido por HackerMaster (desenvolvedor web com experiência em HTML JavaScript, Css e Php).<br><br> E idealizado por Gabriel Mendes (Designer profissional, capacitado e experiente, especialista em Photshop CorelDraw, Canva e entre outras).</p>
+      <p class="common-contact">
+        <a href="https://github.com/KauanBonatto" target="_blank">Github</a>
+        <a href="https://www.instagram.com/kauanbonatto/" target="_blank">Instagram</a>
+      </p>
+      <label class="game-nav-button" for="whoAmIPopup" tabindex="0">Close</label>
+    </section>
+    <section class="popup common-content" id="HowToPlay">
+      <label class="close-button" for="HowToPlayPopup" tabindex="0">x</label>
+      <h3 class="common-title">Como funciona?</h3>
+      <p>Pense em um número entre 1 a 63 eu adivinharei para você!.</p>
+      <p>Olhe todos os cartões e selecione Sim caso seu número esteja presente no cartão ou selecione Não caso seu número não esteja.</p>
+      <p style="color: red;"> Lembre-se de olhar com cuidado antes de selecionar uma opção!!</p>
+      <label class="game-nav-button" for="HowToPlayPopup" tabindex="0">Close</label>
+    </section>
+    
+    </body>
+
+</html>
+ 
